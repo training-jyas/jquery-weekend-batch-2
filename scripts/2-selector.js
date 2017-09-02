@@ -30,24 +30,27 @@ $(document).ready(function () {
     var $fifthLi = $('li:eq(4)');
     // $fifthLi.hide(); // uncomment it to see it
 
-    // // task : to get the first level list items from the 2nd ul element
-    // var $li = $('ul:eq(2) > li:lt(2)');
-    // console.log($li);
+    // task : to get the first level list items from the 2nd ul element
+    // Use '>' symbol to get the first level child elements
+    var ulElem2nd = $('ul:eq(1)');
+    var firstLevelLis = $('ul:eq(1) > li');
 
-    // // first level selector
-    // var $firstLevelLis = $('ul:eq(0) > li');
-    // var $liFirst = $firstLevelLis[0];
-    // console.log($firstLevelLis);
+    // :even selector
+    $Evenlis = $('li:odd');
+    $Evenlis.css('font-size', '40px');
 
-    // // :even selector
-    // $Evenlis = $('li:odd');
-    // $Evenlis.css('font-size', '40px');
+    // selectors with spaces
+    // for this it means all lis which has list-item class
+    var $liWithClass = $('li.list-item');
+    // this means all children of li that has a list-item class
+    var $childrenOfLiWithClass = $('li .list-item');
+    console.log($liWithClass, $childrenOfLiWithClass);
 
-    // // selectors with spaces
-    // var $liWithClass = $('li.list-item');
-    // var $childrenOfLiWithClass = $('li .list-item');
-    // console.log($liWithClass, $childrenOfLiWithClass);
-    // // for the rest go to this link 
-    // // http://api.jquery.com/category/selectors/ 
-    // // https://developer.mozilla.org/en-US/docs/Web/API/Document
+    // get all the lis having either class list-item or list-item1
+    // you have to use a ',' here to achieve this
+    var allLis = $('li.list-item, li.list-item1');
+
+    // for the rest go to this link 
+    // http://api.jquery.com/category/selectors/ 
+    // https://developer.mozilla.org/en-US/docs/Web/API/Document
 });
