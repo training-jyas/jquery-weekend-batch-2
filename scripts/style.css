@@ -16,3 +16,27 @@ form {
 .form-error {
     border: 3px solid red;
 }
+
+.parent {
+    height: 670px;
+    width: 750px;
+    background-color: yellow;
+    color: white;
+    font-weight: bold;
+}
+
+.child {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    float: left;
+    margin: 20px;
+}
+
+.grandchild {
+    height: 40px;
+    width: 40px;
+    background-color: blue;
+    display: inline-block;
+    margin: 10px;
+}
